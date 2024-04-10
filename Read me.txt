@@ -3,3 +3,4 @@ para instalar las bibliotecas necesarias para que el sitio web funcione es neces
 2- ejecutar el comando pip install -r requirements.txt dentro de la carpeta del proyecto
 
 Este es un proyecto al que ire añadiendo cosas nuevas conforme vaya aprendiendo sobre seguridad de backend y el tema de las cookies etc
+es una web bastante sencilla pero me ayudo a poner en practica parte de lo aprendido sobre python y sqlalchemy
