@@ -1,0 +1,5 @@
+para instalar las bibliotecas necesarias para que el sitio web funcione es necesario 
+1- crear un entorno virtual
+2- ejecutar el comando pip install -r requirements.txt dentro de la carpeta del proyecto
+
+Este es un proyecto al que ire añadiendo cosas nuevas conforme vaya aprendiendo sobre seguridad de backend y el tema de las cookies etc
