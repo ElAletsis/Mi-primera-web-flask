@@ -1,0 +1,640 @@
+:root {
+    --fuentePrincipal: "Staatliches" sans-serif;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body {
+    background-color: #ffffff;
+    font-size: 1.6rem;
+    line-height: 1.5;
+}
+
+img {
+    width: 190px;
+    border-radius: 2rem;
+    padding: 0.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+h1 {
+    font-size: 4rem;
+    padding: 4rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+h3 {
+    font-size: 2.4rem;
+}
+
+header {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.nosotros {
+    display: flex;
+    font-size: 2rem;
+    font-family: "Edu NSW ACT Foundation";
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.nosotros__contenido {
+    grid-column: 1;
+    margin: 0 2rem;
+}
+.nosotros__imagen {
+    width: 20%;
+    height: 50%;
+    padding: 0;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.header__imagen {
+    width: 350px;
+    height: 50%;
+    border-radius: 2rem;
+    padding-top: 0.5rem;
+    align-content: center;
+}
+
+.contenedor_header {
+    padding: 1rem;
+}
+
+.texto-header {
+    font-family: "Madimi One", sans-serif;
+    font-size: 3.5rem;
+    color:#353131;
+}
+
+/** Barra de navegacion **/ 
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* Evita que los elementos con hover se sobre pongan a la barra de navegacion*/
+}
+
+.navegacion {
+    background-color: #bdf3f3;
+    padding: 2rem 0;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;    
+    gap: 1.5rem ;
+}
+
+.navegacion__enlace {
+    font-size: 2rem;
+    transition: transform 0.2s;
+    font-family: "Madimi One", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #000000;
+    margin: 0 1rem;
+}
+
+span {
+    font-size: 2rem;
+    font-family: "Madimi One", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    color: #000000;
+    margin: 0 1rem;
+    margin: 0;
+}
+.navegacion__enlace:hover{
+    transform: scale(1.05);
+    color:#608bb4;
+}
+
+/** Fin Barra de navegacion **/
+
+/** Grid **/
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;    
+}
+/** Fin Grid **/
+
+/** Producto **/
+.producto {
+    background-color: #d6dadf;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    width: 100%;
+    height: 70%;
+    margin-bottom: 0;
+    overflow: auto;
+    white-space: normal;
+    box-shadow: none;
+}
+
+.producto__precio{
+    font-size: 2rem;
+    padding-bottom: 1rem;
+    color: #8b8e91;
+}
+
+.producto__nombre {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #000000;
+}
+
+.producto__categoria {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #000000;
+    font-weight: 650;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.producto__informacion {    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.producto__descripcion {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    color: #c29f9a;
+}
+
+.producto__imagen {
+    transition: transform 0.2s;
+}
+
+.producto__imagen:hover {
+    transform: scale(1.15);
+}
+
+.producto__nombre,
+.producto__precio,
+.producto__descripcion {
+    font-family: "Pacifico", cursive;   
+    margin: 1rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.enlace__eliminar {
+    margin: 0;
+    color: red;
+    font-family: sans-serif;
+    width: auto;
+    font-size: 2rem;
+}
+
+.enlace__actualizar {
+    margin: 0;
+    color: #000000;
+    font-family: sans-serif;
+    width: auto;
+    font-size: 2rem;
+}
+
+.p__eliminar,
+.p__actualizar {
+    margin: 0.5rem;
+}
+
+.p__eliminar:hover,
+.p__actualizar:hover{
+    color:#000000;
+    
+    transition: transform 0.3s;
+    transform: scale(1.20);
+}
+/** Fin Producto **/
+
+/** Footer **/
+footer {
+    background-color: #35495e;
+    display: flex;
+    width: 100%;
+    justify-content:space-around;
+}
+
+.footer__texto {
+    font-family: var(--fuentePrincipal);
+    font-size: 3rem;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.enlace-contacto {
+    transition: transform 0.2s;
+    padding: 1.2rem;
+}
+
+.enlace-contacto:hover {
+    transform: scale(1.1);
+    padding: 1.2rem;
+}
+/** Nosotros **/
+
+.contacto {
+    display: flex;
+    flex-direction: column;
+}  
+
+.contacto__contenido {
+    font-family: "Roboto Mono", monospace;
+    font-size: 2.5rem;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.contendor-enlaces{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0.5rem;
+}
+
+
+/** Formularios **/ 
+
+.login-body {
+    background-color: rgba(9, 4, 75, 0.74);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.login-header {
+    font-size: 4rem;
+    font-weight: 600;
+    font-family: "Madimi One", sans-serif;
+    margin: 2rem;
+}
+.login-box {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    width: 50rem;
+    height: 30rem;
+}
+.contenedor-categorias{
+    margin: 1rem;
+}
+
+.categorias {
+    text-align: center;
+    align-items: center;
+    margin: 1.5rem;
+}
+
+.input-box,
+.input-field {
+    text-align: center;
+    font-weight: 650;
+    font-family: sans-serif;
+    width: 100%;
+    height: 4rem;
+    font-size: 1.7rem;
+    padding: 0 2.5rem;
+    border-radius: 1rem;
+    margin-bottom: 1.7rem;
+    border: none;
+}
+
+.image-loader {
+    color: #000000;
+    display: flex;
+    font-size: 1.5rem;
+    justify-content: center;
+    font-weight: 650;   
+    font-family: sans-serif;
+    margin: 1rem 0;
+    padding: 0 ;
+}
+
+.input-field:focus {
+    width: 103%;
+}
+
+::placeholder {
+    color: #000000;
+    font-weight: 650;
+}
+
+label,
+select {
+    font-family: sans-serif;
+    font-weight: 650;
+    width: 15rem;
+    height: 3rem;
+
+}
+select {
+    text-align: center;
+    border-radius: 1rem;
+    margin: 0 0.5rem;
+}
+
+.error {
+    font-weight: 650;
+    font-size: 2rem;
+    text-align: center;
+    font-family: sans-serif;
+    color: red;
+    margin: 0.5rem;
+}
+
+.info {
+    font-weight: 650;
+    font-size: 2rem;
+    text-align: center;
+    font-family: sans-serif;
+    color: #cccccc;
+    margin: 0.5rem;
+}
+
+.message {
+    font-weight: 650;
+    font-size: 2rem;
+    text-align: center;
+    font-family: sans-serif;
+    color: rgb(167, 21, 180);
+    margin: 0.5rem;
+}
+
+.nombre_categoria {
+    font-weight: 650;
+    font-size: 2rem;
+    text-align: center;
+    font-family: sans-serif;
+    color: #cccccc;
+    margin: 0.5rem;
+}
+
+.cancel {
+    font-weight: 650;
+    font-family: sans-serif;
+    margin: 1.2rem;
+    height: 4.5rem;
+    cursor: pointer;
+    color: rgb(10, 6, 4);
+    
+}
+
+.submit {
+    border-radius: 1rem;
+    font-weight: 650;
+    font-family: sans-serif;
+    margin: 1.2rem;
+    width: 15rem;
+    height: 4.5rem;
+    cursor: pointer;
+    background-color: #000000;
+    color: #d6dadf;
+}
+
+
+/** media para pantallas con una 
+    resolucion menor o igual a 390px **/
+@media (max-width:390px) {
+    .grid{
+        grid-template-columns: repeat(2, 1fr);
+        margin: 1rem;
+    }
+
+    h1 {
+        padding: 0.3rem;
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+        padding: 0.5rem;
+        margin: 0;
+    }
+
+    .texto-header {
+        font-size: 2rem;
+    }
+
+    .header__imagen {
+        width: 100%;
+        height: 100%;
+    }
+    .navegacion {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem 0; 
+        margin-bottom: 1rem;
+        gap: 0.5rem;
+    }
+
+    .navegacion__enlace{
+        font-size: 1.6rem;
+        padding: 0.2rem 0;
+    }
+
+    .nosotros {
+        display:flex;
+        font-size: 1.5rem;
+    }
+
+    .nosotros__imagen{
+        display: none;
+    }
+    
+    .producto {
+        padding: 0.5rem;
+        margin-bottom: 0;
+    }
+
+    .producto__informacion {    
+        padding-bottom: 1.5rem;
+        overflow: auto;
+        white-space: normal;
+
+    }
+    
+    .producto__precio{
+        font-size: 1.5rem;
+    }
+    
+    .producto__nombre{
+        font-size: 2rem;
+    }
+
+    .producto__nombre,
+    .producto__precio {
+        font-family: "Pacifico", cursive;
+        line-height: 1;
+        text-align: center;
+    }
+
+    .enlace-eliminar {
+        font-size: 1.5rem;
+    }
+
+    .producto__imagen {
+        width: 100%;
+        height:15rem;
+    }
+
+    .producto__categoria {
+        font-size: 1.5rem;
+    }
+
+    .producto__descripcion {
+        font-size: 1.8rem;
+    }
+
+    .contacto {
+        display: flex;
+        flex-direction: column;
+    }  
+
+    .contacto__contenido {
+        font-size: 1.5rem;
+        padding: 1rem;
+        margin: 0;
+        color: rgb(0, 0, 0);
+    }
+
+    .contenedor-enlaces {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .image-loader {
+        font-size: 1.7rem;
+    }
+    .enlace-contacto {
+        text-align: center;
+    }
+
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem 0;
+        margin: 1rem 0;
+        align-items: center;
+
+    }
+    span {
+        font-size: 1.5rem;
+    }
+    .footer__texto {
+        font-family: var(--fuentePrincipal);
+        margin: 0;
+        font-size: 2rem;
+        padding: 0
+    }
+    .footer__texto:first-child {
+        padding: 0;
+    }
+
+    .icon {
+        width: 55%;
+        height: 100%;
+    }
+}
+
+/** media para pantallas con una 
+    resolucion menor o igual a 412px **/
+@media (max-width:412px) {
+
+    .grid{
+        grid-template-columns: repeat(2, 1fr);
+        margin: 1rem;
+    }
+
+    .texto-header {
+        font-size: 2rem;
+    }
+
+    .header__imagen {
+        width: 100%;
+        height: 100%;
+    }
+    .navegacion {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .navegacion__enlace {
+        font-size: 1.7rem;
+    }
+
+    .nosotros__imagen {
+        display: none;
+    }
+    .nosotros {
+        font-size: 2rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    img {
+        width: 15rem;
+    }
+
+    .contacto__contenido {
+        font-size: 1.6rem;
+    }
+    
+    .producto__categoria {
+        font-size: 1.8rem;
+    }
+
+    .icon {
+        width: 55%;
+        height: 100%;
+    }
+
+    .producto__descripcion {
+        font-size: 2rem;
+    }
+}

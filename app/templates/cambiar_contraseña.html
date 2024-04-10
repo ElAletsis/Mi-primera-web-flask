@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/app.css">
+    <!-- Fuente header -->
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+
+    <title>Cambiar Contraseña</title>
+</head>
+
+<body class="login-body">
+    <div class="login-box">
+        <div class="login-header">
+            <header>Cambiar Contraseña</header>
+        </div>
+        <form action='' method="POST">
+            {{ form.hidden_tag() }}
+            <div class="input-box">
+                {{ form.password1(placeholder="Contraseña",class="input-field")}}
+            </div>  
+            <div class="input-box">
+                {{ form.password2(placeholder="Confirmar Contraseña",class="input-field")}}
+            </div>  
+            <div >
+                {{ form.submit(class="submit", label="Ingresar")}}
+            </div>
+    </div>
+</body>
+</html>

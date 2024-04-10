@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% extends 'index.html'%}
+    {%block title%}<title>Nuestros productos</title>{%endblock%}
+</head>
+{%block contenido%}
+    <main class="contenedor">
+        <div class="grid">
+            {% for categoria in categorias%}
+                <div class="categorias">
+                    <a href="{{categoria.id}}" >
+                        <img src="/static/{{categoria.name}}/{{categoria.image_category}}" class="producto__imagen" alt="imagen producto" >
+                    </a>
+                    <a href="{{categoria.id}}">
+                        <div class="producto__informacion">
+                            <p class="producto__categoria">{{categoria.name}}</p>
+                        </div>
+                    </a>
+                </div>
+            {%endfor%}
+        </div>
+    </main>
+{%endblock%}
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/app.css">
+    <!-- Fuente header -->
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+
+    <title>Inicia Sesion</title>
+</head>
+
+
+<body class="login-body">
+    <div class="login-box">
+        <div class="login-header">
+            <header>Inicia sesion</header>
+        </div>
+        <form action='' method="POST">
+            {{ form.hidden_tag() }}
+            <div class="input-box">
+                {{ form.user_name(placeholder="Nombre de usuario",class="input-field")}}
+            </div>
+            <div class="input-box">
+                {{ form.password(placeholder="Contraseña",class="input-field")}}
+            </div>
+            <div>
+                {{ form.submit(class="submit", label="Ingresar")}}
+            <a class="navegacion__enlace " href="{{url_for('reset_request')}}">Olvide mi Contraseña</a>
+            </div>
+    </div>
+</body>
+
+</html>

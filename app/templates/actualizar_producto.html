@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/app.css">
+    <!-- Fuente header -->
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+
+    <title>Actualizar producto</title>
+</head>
+
+
+<body class="login-body">
+    <div class="login-box">
+        <div class="login-header">
+            <header>
+                <header>Actualizar Articulo</header>
+            </header>
+        </div>
+        <form method="POST" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+            <div class="input-box">
+                {{ form.nombre_articulo(placeholder="Ingresa el nuevo nombre del articulo",class="input-field") }}
+            </div>
+            <div class="input-box">
+                {{ form.precio_articulo(placeholder="Ingresa el nuevo precio del articulo",class="input-field") }}
+            </div>
+            <div class="input-box">
+                {{ form.descripcion_articulo(placeholder="Ingresa la nueva descripcion del articulo",class="input-field") }}
+            </div>
+            <div class="image-loader">
+                {{ form.imagen_articulo(class="image-loader", id="imagen_articulo") }}
+            </div>
+            <input class="submit" type="reset" value="Limpiar campos"/>           
+            {{ form.submit(class="submit") }}
+        </form>
+        {% with messages = get_flashed_messages(with_categories=true)%}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <p class="{{category}}">{{ message }}</p>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </div>  
+</body>
+</html>

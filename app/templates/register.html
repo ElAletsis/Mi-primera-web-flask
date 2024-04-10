@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/app.css">
+    <!-- Fuente header -->
+    <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
+    <title>Registro</title>
+</head>
+<body class="login-body">
+    <div class="login-box">
+        <div class="login-header">
+            <header>Registrarse</header>
+        </div>
+        <form action='' method="POST">
+            {{ form.hidden_tag() }}
+            <div class="input-box">
+                {{ form.user_name(placeholder="Nombre de usuario",class="input-field")}}
+            </div>
+            <div class="input-box">
+                {{ form.password(placeholder="Contraseña",class="input-field")}}
+            </div>  
+            <div class="input-box">
+                {{ form.email(placeholder="Correo electronico",class="input-field")}}
+            </div>  
+            <div >
+                {{ form.submit(class="submit", label="Ingresar")}}
+            </div>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                    {% for message in messages %}
+                        <p class="mensaje-error">{{ message }}</p>
+                    {% endfor %}
+            {%endif%}
+        {%endwith%}
+    </div>
+</body>
+</html>

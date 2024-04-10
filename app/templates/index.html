@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="../static/css/app.css">
+    <!-- Fuente  .navegacion__enlace-->
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <!-- Fuente  .producto__nombre/precio-->
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <!-- Fuente  .p Contacto -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <!-- Fuente .nosotros -->
+    <link href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation:wght@400..700&family=Rakkas&display=swap" rel="stylesheet">
+
+    {%block title%}<title>Inicio</title>{%endblock%}
+</head>
+<body>
+    {%block header%}
+        <header>
+            <a class="header__imagen" href="{{url_for('index')}}">
+                <img src="../static/Joyeria_mayeri.jpeg" class="header__imagen" alt="imagen header">
+            </a>
+            <!-- <img src="../static/imagenes_productos/Joyeria_mayeri.jpeg" class="header__imagen" alt="imagen producto"> -->
+            <div class="contenedor_header"> 
+                {%if current_user.is_authenticated%}
+                    <h1 class="texto-header"> Bienvenido {{ current_user.name }}!</h1>  
+                {%else%}
+                    <h2 class="texto-header"> Guadalajara <br>Jalisco México</h2>
+                {%endif%}
+            </div>
+        </header>
+    {%endblock%}
+<nav class="navegacion">
+    {% if current_user.is_authenticated %}
+        <a class="navegacion__enlace" href="{{url_for('index')}}">Inicio</a> 
+        <a class="navegacion__enlace" href="{{url_for('nuestros_productos')}}">Nuestros Productos</a>
+        <a class="navegacion__enlace" href="{{url_for('contacto')}}">Contacto</a>
+        <a class="navegacion__enlace" href="{{url_for('articulo_nuevo')}}" target="_blank" >Agregar articulos</a>
+        <a class="navegacion__enlace" href="{{url_for('crear_categoria')}}" target="_blank" >Crear categoria</a>
+        <a class="navegacion__enlace" href="{{url_for('eliminar_articulos')}}" target="_blank">Eliminar/Actualizar Articulos</a>
+        <a class="navegacion__enlace" href="{{url_for('logout')}}">Cerrar sesion</a>
+    {% else %}    
+        <a class="navegacion__enlace" href="{{url_for('index')}}">Inicio</a>
+        <a class="navegacion__enlace" href="{{url_for('contacto')}}">Contacto</a>
+        <a class="navegacion__enlace" href="{{url_for('nuestros_productos')}}">Nuestros Productos</a>
+        <a class="navegacion__enlace" href="{{url_for('login')}}">Iniciar sesion</a>
+    {% endif %}
+</nav>
+{%block contenido%}
+        <div class="nosotros">
+            <img src="../static/perrito_bonito.jpg" alt="" class="nosotros__imagen">
+            <p class="nosotros__contenido">
+                Nosotros <br>           
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus nec placerat ex. 
+                Ut pellentesque porta congue. 
+                Integer sollicitudin in turpis in sollicitudin. Vestibulum hendrerit pharetra purus vel fermentum. Aenean semper quis lorem non porttitor. 
+                Phasellus finibus libero metus, a egestas turpis euismod id. Nam porttitor mi ac convallis ullamcorper. 
+                Etiam mollis iaculis ligula sit amet malesuada. Ut maximus turpis id libero rutrum volutpat.
+                Maecenas lorem est, dignissim quis mi vel, interdum condimentum mi. Mauris vel imperdiet sapien. Vivamus tincidunt, erat commodo maximus aliquam, purus neque sollicitudin justo, at tincidunt lectus augue id nunc.
+            </p>
+        </div>
+
+{%endblock%}
+
+<footer class="navegacion">
+    <a class="navegacion__enlace " href="{{url_for('contacto')}}">
+        Contacto
+    </a>
+    <span>Todos los derechos reservados 2024</span>
+</footer>
+</body>
+</html>

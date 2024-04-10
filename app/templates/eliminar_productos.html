@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% extends 'index.html'%}
+    {% block title %} <title>Eliminar productos</title> {% endblock %}
+</head>
+
+{%block contenido%}
+    <main class="contenedor">
+        <div class="grid">
+        {% for articulo in articulos %}
+            {% set categoria = categorias.get(articulo.id) %}
+            <div class="categorias">
+                <a href="/static/{{ categoria.name }}/{{articulo.image_name}}" target="_blank">
+                    <img src="/static/{{ categoria.name }}/{{articulo.image_name}}" class="producto__imagen" alt="imagen producto" >
+                </a>
+                <div class="producto__informacion">
+                    <p class="producto__nombre">{{articulo.name}}</p>
+                    <p class="producto__descripcion">{{articulo.description}}</p>
+                    <p class="p__eliminar"> <a class="enlace__eliminar" href="/eliminar/{{articulo.id}}">Eliminar</a> </p>
+                    <p class="p__actualizar"> <a class="enlace__actualizar" href="{{url_for('actualizar_articulo', id=articulo.id)}}">Actualizar</a> </p>                  
+                </div>
+            </div>
+        {%endfor%}
+        </div>
+    </main>
+{%endblock%}
+</html>
