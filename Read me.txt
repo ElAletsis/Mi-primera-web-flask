@@ -4,3 +4,7 @@ para instalar las bibliotecas necesarias para que el sitio web funcione es neces
 
 Este es un proyecto al que ire añadiendo cosas nuevas conforme vaya aprendiendo sobre seguridad de backend y el tema de las cookies etc
 es una web bastante sencilla pero me ayudo a poner en practica parte de lo aprendido sobre python y sqlalchemy
+
+las credenciales para hacer login y poder hacer uso de los cruds son:
+user: admin
+password: 123456
